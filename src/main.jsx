@@ -4,8 +4,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./Component/App/App";
 import Login from "./Layout/Login";
 import './index.css'
-import FaceBook from "./Component/Login/FaceBook/FaceBook";
-import Google from "./Component/Login/Google/Google";
+// import FaceBook from "./Component/Login/FaceBook/FaceBook";
+// import Google from "./Component/Login/Google/Google";
+import Profile from "./Component/Profile/Profile";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,17 +15,13 @@ const router = createBrowserRouter([
   {
     path: "/loginPage",
     element: <Login></Login>,
-    // children: [
-    //   {
-    //     path: "/facebook/login",
-    //     element: <FaceBook></FaceBook>
-    //   },
-    //   {
-    //     path: "/google/login",
-    //     element: <Google></Google>,
-    //   },
-    // ],
+
   },
+  {
+    path: "/loginPage/profile",
+    element: <Profile></Profile>
+  },
+ 
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
